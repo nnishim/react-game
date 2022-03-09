@@ -1,0 +1,31 @@
+.board{
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: repeat(4, 100px);
+	gap: 20px 0;
+}
+.board__item{
+	cursor: pointer;
+	border: 1px solid #ccc;
+	width: 70px;
+	height: 70px;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.board__item:hover{
+	transform: rotateY(180deg);
+}
+.card__face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.card__face--front {
+  transform: rotateY( 180deg );
+}
